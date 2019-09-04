@@ -22,6 +22,13 @@ namespace Legos
 
             fatHead.Talk();
             minifigure.Head.Talk();
+
+            switch (minifigure.Head)
+            {
+                case YodaHead h:
+                    h.Battle();
+                    break;
+            }
         }
     }
 }
