@@ -1,10 +1,15 @@
-﻿using System;
+﻿using Legos.Minifigures.Parts;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Legos.MiniFigures
 {
-    class Minifigures
+    class Minifigure
     {
+        public Head Head { get; set; }
+
+        public Torso Torso { get; set; }
+
     }
 }

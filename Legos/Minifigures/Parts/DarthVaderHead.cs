@@ -4,7 +4,17 @@ using System.Text;
 
 namespace Legos.Minifigures.Parts
 {
-    class DarthVaderHead
+    class DarthVaderHead : Head
     {
+        public override void Talk()
+        {
+            Console.WriteLine("KOOOOH PUUUHRR");
+            base.Talk();
+            Console.WriteLine("KOOOOH PUUUHRR");
+        }
+        public override void Think()
+        {
+            Console.WriteLine("Am I your father?");
+        }
     }
 }

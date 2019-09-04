@@ -4,7 +4,12 @@ using System.Text;
 
 namespace Legos.Minifigures.Parts
 {
-    class HeadSize
-    {
+        public enum HeadSize
+        {
+            Small,
+            Medium,
+            Big,
+            Fat
+        }
+
     }
-}

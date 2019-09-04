@@ -1,4 +1,6 @@
 ﻿using System;
+using Legos.MiniFigures;
+using Legos.Minifigures.Parts;
 
 namespace Legos
 {
@@ -6,7 +8,20 @@ namespace Legos
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var minifigure = new Minifigure();
+            minifigure.Head = new YodaHead
+            {
+                EyeColor = "Brown",
+                HairColor = "Blue",
+                HasNose = false,
+                MouthIsOpen = true,
+                NumberOfEyes = 3
+            };
+
+            var fatHead = new FatHead();
+
+            fatHead.Talk();
+            minifigure.Head.Talk();
         }
     }
 }

@@ -4,7 +4,33 @@ using System.Text;
 
 namespace Legos.Minifigures.Parts
 {
-    class Pirate
+    class PirateTorso
     {
+        public string Shirt { get; set; }
+        public int NumberOfArms { get; set; }
+        public HandType HandType { get; set; }
+        public bool ChestHair => true; //expression bodied member
+
+        public PirateTorso(HandType handType)
+        {
+            HandType = handType;
+            Shirt = "Froofy with ruffles";
+        }
+
+        public void Flex()
+        {
+            Console.WriteLine("The pirate torso flexed swashbucklingly");
+        }
+
+        public void Fight()
+        {
+            Console.WriteLine("The pirate torso waves a sword around");
+        }
+    }
+    enum HandType
+    {
+        Regular,
+        Hook,
+        None
     }
 }
