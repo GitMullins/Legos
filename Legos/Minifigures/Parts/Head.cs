@@ -5,6 +5,7 @@ using System.Text;
 namespace Legos.Minifigures.Parts
 {
     abstract class Head
+    //anything that inherits from this ABSTRACT Head class has to also have a Think() method.
     {
         public int NumberOfEyes { get; set; }
         public string EyeColor { get; set; }
@@ -19,6 +20,5 @@ namespace Legos.Minifigures.Parts
         }
 
         public abstract void Think();
-        //anything that inherits from this Head class has to also have a Think() method.
     }
 }
