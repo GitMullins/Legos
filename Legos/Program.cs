@@ -8,8 +8,7 @@ namespace Legos
     {
         static void Main(string[] args)
         {
-            var minifigure = new Minifigure();
-            minifigure.Head = new YodaHead
+            var head = new YodaHead
             {
                 EyeColor = "Brown",
                 HairColor = "Blue",
@@ -18,17 +17,24 @@ namespace Legos
                 NumberOfEyes = 3
             };
 
-            var fatHead = new FatHead();
+            //var fatHead = new FatHead();
 
-            fatHead.Talk();
-            minifigure.Head.Talk();
+            //fatHead.Talk();
 
-            switch (minifigure.Head)
-            {
-                case YodaHead h:
-                    h.Battle();
-                    break;
-            }
+            /*            switch (minifigure.Head)
+                        {
+                            case YodaHead h:
+                                h.Battle();
+                                break;
+                        }
+            */
+            /*            torso.Fight();
+                        torso.Flex();
+            */
+            var torso = new YetiTorso();
+
+            var minifigure = new Minifigure(head,torso);
+            minifigure.Battle();
         }
     }
 }

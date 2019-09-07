@@ -4,12 +4,9 @@ using System.Text;
 
 namespace Legos.Minifigures.Parts
 {
-    class PirateTorso
+    class PirateTorso : Torso
     {
-        public string Shirt { get; set; }
-        public int NumberOfArms { get; set; }
-        public HandType HandType { get; set; }
-        public bool ChestHair => true; //expression bodied member
+        public override bool ChestHair => true; //expression bodied member
 
         public PirateTorso(HandType handType)
         {
@@ -17,12 +14,12 @@ namespace Legos.Minifigures.Parts
             Shirt = "Froofy with ruffles";
         }
 
-        public void Flex()
+        public override void Flex()
         {
             Console.WriteLine("The pirate torso flexed swashbucklingly");
         }
 
-        public void Fight()
+        public override void Fight()
         {
             Console.WriteLine("The pirate torso waves a sword around");
         }
