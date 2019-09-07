@@ -17,24 +17,19 @@ namespace Legos
                 NumberOfEyes = 3
             };
 
-            //var fatHead = new FatHead();
-
-            //fatHead.Talk();
-
-            /*            switch (minifigure.Head)
-                        {
-                            case YodaHead h:
-                                h.Battle();
-                                break;
-                        }
-            */
-            /*            torso.Fight();
-                        torso.Flex();
-            */
             var torso = new YetiTorso();
 
-            var minifigure = new Minifigure(head,torso);
-            minifigure.Battle();
+            var legs = new ZombieLegs();
+
+            var yodaYetiZombie = new Minifigure(head, torso, legs);
+            yodaYetiZombie.Battle();
+
+            var fatHead = new FatHead();
+            var pirateTorso = new PirateTorso(HandType.Hook);
+            var centaurLegs = new CentaurLegs();
+
+            var fatHeadedCentaurPirate = new Minifigure(fatHead, pirateTorso, centaurLegs);
+            fatHeadedCentaurPirate.Battle();
         }
     }
 }
