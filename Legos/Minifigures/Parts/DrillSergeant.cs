@@ -2,9 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Legos.Minifigures
+namespace Legos.Minifigures.Parts
 {
-    interface DrillSergeant
+    interface DrillSergeant : IShouter
     {
+        public void Talk()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Shout(int numberOfDecibels)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Legos.Minifigures.Parts
 {
-    class YodaHead : Head
+    class YodaHead : Head, ITalker
     {
         public bool HasEars { get; private set; }
 

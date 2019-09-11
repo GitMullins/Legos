@@ -7,14 +7,14 @@ namespace Legos.MiniFigures
 {
     class Minifigure
     {
-        readonly Head _head;
+        readonly ITalker _talker;
         readonly Torso _torso;
         readonly Legs _legs;
 
 
-        public Minifigure (Head head, Torso torso, Legs legs)
+        public Minifigure (ITalker talker, Torso torso, Legs legs)
         {
-            _head = head;
+            _talker = talker;
             _torso = torso;
             _legs = legs;
         }
@@ -22,7 +22,7 @@ namespace Legos.MiniFigures
         public void Battle()
         {
             _legs.Walk();
-            _head.Talk();
+            _talker.Talk();
             _torso.Flex();
             _torso.Fight();
             _legs.Kick();

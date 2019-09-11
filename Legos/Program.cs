@@ -30,6 +30,16 @@ namespace Legos
 
             var fatHeadedCentaurPirate = new Minifigure(fatHead, pirateTorso, centaurLegs);
             fatHeadedCentaurPirate.Battle();
+
+            var talkers = new List<Italker>()
+            {
+                drillSergeant, fatHead, head
+            };
+
+            foreach (var talker in talkers)
+            {
+                talker.Talk();
+            }
         }
     }
 }
